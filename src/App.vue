@@ -1,13 +1,14 @@
 <template>
   <main class="bg-gray-900 w-screen h-screen"> 
-    <h1 class="text-inherit text-5xl text-center py-5 font-semibold">
-      
-    </h1>
+    
     <div class="">
       <BarraLateral/>
     </div>
-    <div class="">
-      <Formulario/>
+    <div>
+      <Formulario @aoSalvarTarefa = "salvarTarefa"/>
+      <div class="lista space-y-7">
+        <Tarefa v-for="(tarefa, index) in tarefas" :key="index" :tarefa="tarefa"/>
+      </div>
     </div>
   </main>
    
@@ -17,13 +18,28 @@
 import { defineComponent } from 'vue';
 import BarraLateral from './components/BarraLateral.vue'
 import Formulario from './components/Formulario.vue'
+import Tarefa from './components/Tarefa.vue';
+import ITarefa from './interfaces/ITarefa'
 export default defineComponent({
   name: 'App',
   components: {
     BarraLateral,
-    Formulario
-    
+    Formulario,
+    Tarefa
+  },
+  data(){
+    return {
+      tarefas: [] as ITarefa[]
+    }
+  },
+  methods: {
+    salvarTarefa (tarefa: ITarefa){
+      this.tarefas.push(tarefa)
+    }
   }
+
+
+
 });
 </script>
 
