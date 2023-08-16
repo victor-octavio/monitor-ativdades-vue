@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.botao{
+    @apply text-white bg-gray-950 border-l-2 border-green-800  px-2 py-1 disabled:bg-inherit disabled:opacity-20 disabled:shadow-none disabled:border-none shadow-md shadow-black
+}
+
+.campoTarefa{
+    @apply shadow-md shadow-black border-l-2 border-green-800 h-12 w-2/4 px-4 bg-gray-950 placeholder-gray-500 text-gray-200 outline-none
+}

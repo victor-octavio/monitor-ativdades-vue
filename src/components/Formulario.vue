@@ -1,15 +1,13 @@
 <template>
-    <div class="box">
-        <div class="columns">
-            <div class="column is-8" role="form" aria-label="Formulário para criação de uma nova tarefa">
+    <div class="">
+        <div class="py-8 px-10 mx-10">
+            <div class="flex space-x-5 justify-center items-center font-light " role="form" aria-label="Formulário para criação de uma nova tarefa">
                 <input 
                 type="text" 
-                class="input" 
+                class="campoTarefa" 
                 placeholder="Qual tarefa você deseja iniciar?"
                 v-model="descricao"
                 >
-            </div>
-            <div class="column">
                 <Temporizador @aoTemporizadorFinalizado="finalizarTarefa"/>
             </div>
         </div>

@@ -1,9 +1,12 @@
 <template>
-  <main class="columns is-gapless is-multiline "> 
-    <div class="column is-one-quarter">
+  <main class="bg-gray-900 w-screen h-screen"> 
+    <h1 class="text-inherit text-5xl text-center py-5 font-semibold">
+      
+    </h1>
+    <div class="">
       <BarraLateral/>
     </div>
-    <div class="column is-three-quarter">
+    <div class="">
       <Formulario/>
     </div>
   </main>
@@ -24,13 +27,4 @@ export default defineComponent({
 });
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+

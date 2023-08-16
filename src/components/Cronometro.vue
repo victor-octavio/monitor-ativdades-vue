@@ -1,6 +1,6 @@
 <template>
-    <section>
-        <strong>
+    <section class="py-2">
+        <strong class="text-white">
             {{tempoDecorrido}}
         </strong>
     </section>
