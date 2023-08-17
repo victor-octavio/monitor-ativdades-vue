@@ -1,25 +1,27 @@
 <template>
-    <div class="container w-3/5 shadow-md font-bold shadow-black h-12 text-white bg-gray-950 px-5">
+    <TarefaVazia>
         <div class="columns">
             <div class="column is-10">
-                {{tarefa.descricao}}
+                {{tarefa.descricao || "Tarefa sem descrição"}}
             </div>
             <div class="column py-1">
             <Cronometro :tempoEmSegundos = "tarefa.duracaoEmSegundos"/>
             </div>
         </div>
-    </div>
+    </TarefaVazia>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import Cronometro from './Cronometro.vue';
 import ITarefa from '../interfaces/ITarefa';
+import TarefaVazia from './TarefaVazia.vue';
 
 export default defineComponent({
    name: 'TarefaItem',
    components: {
     Cronometro,
+    TarefaVazia,
    },
    props: { 
     tarefa: {
